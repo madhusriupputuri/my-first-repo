@@ -1,0 +1,100 @@
+SQL : 
+1.Explain  DDL and DML commands ?
+DDL (Data Definition Language) - Defines the structure of the database — like creating or changing tables.
+- Examples:
+- CREATE → make a new table
+- ALTER → change a table (add/remove columns)
+- DROP → delete a table
+DML (Data Manipulation Language)- Works with the data inside the tables — adding, changing, or removing records.
+- Examples:
+- INSERT → add new data
+- UPDATE → modify existing data
+- DELETE → remove data
+- SELECT → fetch data
+
+2.What are indexes? 
+- In databases, indexes help the system find data faster without scanning the whole table.
+
+3.How would you find the second highest salary table from a employee table?
+SELECT salary
+FROM employee
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1;
+
+Ansible:
+1.Do you have exposure in Ansible? How you used in your project?
+Ansible is an automation tool, used to write playbooks in YAML, configure servers, manage deployments. Also used Ansible with Terraform and CI/CD pipelines to streamline cloud automation, which saved time and reduced errors
+
+2.What is YAML and Why is it used in Ansible?
+YAML is a human-readable data serialization language, it makes Ansible playbooks simple, structured, and easy to understand.
+
+3.What is an Inventory file?
+An inventory file in YAML is a list of hosts (servers) along with their variables. It tells Ansible which machines to connect and the details of how to connect to them
+
+4.What are ansible facts how do you use them?
+Facts are system details gathered by Ansible when it connects to a host.
+- Examples: operating system, IP address, CPU, memory, hostname.
+
+Write a playbook for installing nginx server?
+
+Monitering Tools:
+Datadog, Grafana
+Linux:
+1.What command would you use to check disk usage in a Linux server. (df -h)
+2.How do you check CPU and memory usage in Linux?  -- (Top,htop, vmstat, free-h)
+3.Can you name the command to find the hidden files in Linux server --   ls -a
+4.How do you check system logs in Linux? where are they stored?  -- 
+--system logs are records of system and application activity that help you find problems and monitor how the system works cat/var/log/syslog
+5.How you give permission to a file and could you name the commannd? -- chmod UGO filename, chmod -RUGO folder9 for both f&d
+
+Devops Questions 
+
+Kubernetes pods are restarting frequently. How would you troubleshoot?
+Answer: Check kubectl logs, kubectl describe pod, resource limits, health probes, and application errors.
+3. Jenkins pipeline is stuck during build. What would you check?
+Answer: Check build logs, agent availability, disk space, plugin issues, and Jenkins server resources.
+4. Your microservices cannot communicate with each other in Kubernetes. Why?
+Answer: Check service configuration, DNS resolution, network policies, and service endpoints.
+5. A containerized application works locally but fails in Kubernetes. What could be wrong?
+Answer: Environment variables, config maps, secrets, resource limits, or incorrect container ports.
+6. High CPU usage in production servers. How do you handle it?
+Answer: Identify processes using top/htop, analyze logs, scale infrastructure, or optimize application code.
+7. How would you handle zero-downtime deployment?
+Answer: Implement rolling updates, blue-green deployment, or canary deployment.
+8. Your CI/CD pipeline fails due to dependency issues. What will you do?
+Answer: Pin dependency versions, use virtual environments, and maintain consistent build environments.
+9. Application logs are growing very fast and filling disk space. Solution?
+Answer: Implement log rotation, centralized logging (ELK), and retention policies.
+10. How would you debug a slow API in production?
+Answer: Check application logs, database queries, CPU/memory usage, and use monitoring tools.
+11. How do you manage configuration across multiple environments?
+Answer: Use configuration management tools like Ansible, environment variables, or config files.
+12. Your Kubernetes cluster nodes are running out of memory. What would you do?
+Answer: Analyze resource usage, increase node capacity, optimize resource limits, or scale cluster.
+13. A database migration breaks the application. What should be done?
+Answer: Roll back migration, restore backup, and test migrations in staging before production.
+14. How would you secure secrets in a DevOps pipeline?
+Answer: Use secret managers like Vault, AWS Secrets Manager, or Kubernetes secrets.
+15. Your monitoring alerts show sudden traffic spikes. What steps would you take?
+Answer: Verify if it's real traffic, scale infrastructure (auto-scaling), and check for DDoS attacks.
+16. Developers complain deployments are slow. How can you improve it?
+Answer: Optimize CI/CD pipelines, use caching, parallel jobs, and reduce build steps.
+17. How do you ensure high availability in production systems?
+Answer: Use load balancers, redundancy, auto-scaling, and multi-zone deployments.
+18. A Docker image size is very large. How would you reduce it?
+Answer: Use minimal base images (Alpine), multi-stage builds, and remove unnecessary files.
+19. Your infrastructure changes frequently. How do you manage it?
+Answer: Use Infrastructure as Code tools like Terraform and maintain version control.
+20. How would you handle a security vulnerability found in production?
+Answer: Patch the vulnerability immediately, update dependencies, redeploy, and perform security scans.
+
+Python questions 
+
+What are Python virtual environments?
+Answer: A virtual environment isolates Python dependencies for a project using tools like venv or virtualenv.
+
+ What is a Python script used for in DevOps?
+Answer: Python scripts automate tasks like deployment, log analysis, monitoring, and server management.
+
+What is an API and how does Python interact with it?
+Answer: An API allows communication between systems, and Python interacts using libraries like requests
